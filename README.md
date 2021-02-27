@@ -7,7 +7,7 @@ Primera tarea:
   - Muestra el pull request al supervisor
 
 **Turtlebots**
-- _Nombre_
+- _Sebas_
 - _Nombre_
 - _Nombre_
 - _Nombre_
