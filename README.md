@@ -26,7 +26,9 @@ Primera tarea:
 
 **Comandos importantes**
 Clonar un repositorio: 
-  `git clone <url repo remoto>`
+  `bash
+  git clone <url repo remoto>
+  `
   
 Crear una branch  
   ```bash
@@ -35,7 +37,9 @@ Crear una branch
   ```
   
 Subir su branch a repo remoto
-  `git push origin <branch>`
+  `bash
+  git push origin <branch>
+  `
   
 Subir cambios a su branch
   ```bash
