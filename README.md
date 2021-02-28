@@ -30,6 +30,7 @@ Clonar un repositorio:
   
 Crear una branch  
   `cd <nombre del repositorio>`
+  
   `git checkout -b <nombre de su branch> <branch base>`
   
 Subir su branch a repo remoto
@@ -37,7 +38,9 @@ Subir su branch a repo remoto
   
 Subir cambios a su branch
   `git add <documentos>`
+  
   `git commit -m "Añade una descripción de lo que hiciste"`
+  
   `git push origin <nombre de su branch>`
   
 En github:
