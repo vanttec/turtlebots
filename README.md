@@ -26,7 +26,7 @@ Primera tarea:
 
 **Comandos importantes**
 Clonar un repositorio: 
-  git clone <url repo remoto>
+  'git clone <url repo remoto>'
   
 Crear una branch  
   cd <nombre del repositorio>
