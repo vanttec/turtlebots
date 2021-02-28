@@ -40,7 +40,7 @@ Subir su branch a repo remoto
 Subir cambios a su branch
   ```bash
   git add <documentos>
-  git commit -m "Añade una descripción de lo que hiciste
+  git commit -m "Añade una descripción de lo que hiciste"
   git push origin <nombre de su branch>
   ```
   
