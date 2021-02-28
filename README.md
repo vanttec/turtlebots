@@ -26,19 +26,19 @@ Primera tarea:
 
 **Comandos importantes**
 Clonar un repositorio: 
-  'git clone <url repo remoto>'
+  `git clone <url repo remoto>`
   
 Crear una branch  
-  cd <nombre del repositorio>
-  git checkout -b <nombre de su branch> <branch base>
+  `cd <nombre del repositorio>
+  git checkout -b <nombre de su branch> <branch base>`
   
 Subir su branch a repo remoto
-  git push origin <branch>
+  `git push origin <branch>`
   
 Subir cambios a su branch
-  git add <documentos>
+  `git add <documentos>
   git commit -m "Añade una descripción de lo que hiciste"
-  git push origin <nombre de su branch>
+  git push origin <nombre de su branch>`
   
 En github:
   Abrir un pull request hacia la branch determinada y seleccionar un reviewer (Iván, Saúl o Sebas)
