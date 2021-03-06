@@ -10,7 +10,7 @@ Primera tarea:
 - _Alex :D_
 - _Nombre_
 - _Nombre_
-- _Nombre_
+- _Lucas o.o_
 - _Nombre_
 - _Nombre_
 - _Nombre_
