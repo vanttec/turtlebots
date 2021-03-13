@@ -314,6 +314,12 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//Value Computed by CMake
+tutorials_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/tutorials
+
+//Value Computed by CMake
+tutorials_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/tutorials
+
 
 ########################
 # INTERNAL cache entries

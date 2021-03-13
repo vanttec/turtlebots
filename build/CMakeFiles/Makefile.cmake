@@ -10,13 +10,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.5.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.5.1/CMakeSystem.cmake"
-  "act1/catkin_generated/package.cmake"
   "catkin/catkin_generated/version/package.cmake"
   "catkin_generated/installspace/_setup_util.py"
   "catkin_generated/order_packages.cmake"
+  "tutorials/catkin_generated/package.cmake"
   "/home/ivan5d/turtlebots/src/CMakeLists.txt"
-  "/home/ivan5d/turtlebots/src/act1/CMakeLists.txt"
-  "/home/ivan5d/turtlebots/src/act1/package.xml"
+  "/home/ivan5d/turtlebots/src/tutorials/CMakeLists.txt"
+  "/home/ivan5d/turtlebots/src/tutorials/package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/../package.xml"
   "/opt/ros/kinetic/share/catkin/cmake/all.cmake"
   "/opt/ros/kinetic/share/catkin/cmake/assert.cmake"
@@ -142,7 +142,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
   "gtest/gtest/CMakeFiles/CMakeDirectoryInformation.cmake"
-  "act1/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tutorials/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -156,5 +156,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "gtest/CMakeFiles/gmock_main.dir/DependInfo.cmake"
   "gtest/gtest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "gtest/gtest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
-  "act1/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
+  "tutorials/CMakeFiles/_catkin_empty_exported_target.dir/DependInfo.cmake"
   )

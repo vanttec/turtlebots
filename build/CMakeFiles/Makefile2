@@ -387,52 +387,52 @@ clean: gtest/gtest/CMakeFiles/gtest_main.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Directory level rules for directory act1
+# Directory level rules for directory tutorials
 
 # Convenience name for "all" pass in the directory.
-act1/all:
+tutorials/all:
 
-.PHONY : act1/all
+.PHONY : tutorials/all
 
 # Convenience name for "clean" pass in the directory.
-act1/clean: act1/CMakeFiles/_catkin_empty_exported_target.dir/clean
+tutorials/clean: tutorials/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
-.PHONY : act1/clean
+.PHONY : tutorials/clean
 
 # Convenience name for "preinstall" pass in the directory.
-act1/preinstall:
+tutorials/preinstall:
 
-.PHONY : act1/preinstall
+.PHONY : tutorials/preinstall
 
 #=============================================================================
-# Target rules for target act1/CMakeFiles/_catkin_empty_exported_target.dir
+# Target rules for target tutorials/CMakeFiles/_catkin_empty_exported_target.dir
 
 # All Build rule for target.
-act1/CMakeFiles/_catkin_empty_exported_target.dir/all:
-	$(MAKE) -f act1/CMakeFiles/_catkin_empty_exported_target.dir/build.make act1/CMakeFiles/_catkin_empty_exported_target.dir/depend
-	$(MAKE) -f act1/CMakeFiles/_catkin_empty_exported_target.dir/build.make act1/CMakeFiles/_catkin_empty_exported_target.dir/build
+tutorials/CMakeFiles/_catkin_empty_exported_target.dir/all:
+	$(MAKE) -f tutorials/CMakeFiles/_catkin_empty_exported_target.dir/build.make tutorials/CMakeFiles/_catkin_empty_exported_target.dir/depend
+	$(MAKE) -f tutorials/CMakeFiles/_catkin_empty_exported_target.dir/build.make tutorials/CMakeFiles/_catkin_empty_exported_target.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/ivan5d/turtlebots/build/CMakeFiles --progress-num= "Built target _catkin_empty_exported_target"
-.PHONY : act1/CMakeFiles/_catkin_empty_exported_target.dir/all
+.PHONY : tutorials/CMakeFiles/_catkin_empty_exported_target.dir/all
 
 # Build rule for subdir invocation for target.
-act1/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
+tutorials/CMakeFiles/_catkin_empty_exported_target.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan5d/turtlebots/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 act1/CMakeFiles/_catkin_empty_exported_target.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 tutorials/CMakeFiles/_catkin_empty_exported_target.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/ivan5d/turtlebots/build/CMakeFiles 0
-.PHONY : act1/CMakeFiles/_catkin_empty_exported_target.dir/rule
+.PHONY : tutorials/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: act1/CMakeFiles/_catkin_empty_exported_target.dir/rule
+_catkin_empty_exported_target: tutorials/CMakeFiles/_catkin_empty_exported_target.dir/rule
 
 .PHONY : _catkin_empty_exported_target
 
 # clean rule for target.
-act1/CMakeFiles/_catkin_empty_exported_target.dir/clean:
-	$(MAKE) -f act1/CMakeFiles/_catkin_empty_exported_target.dir/build.make act1/CMakeFiles/_catkin_empty_exported_target.dir/clean
-.PHONY : act1/CMakeFiles/_catkin_empty_exported_target.dir/clean
+tutorials/CMakeFiles/_catkin_empty_exported_target.dir/clean:
+	$(MAKE) -f tutorials/CMakeFiles/_catkin_empty_exported_target.dir/build.make tutorials/CMakeFiles/_catkin_empty_exported_target.dir/clean
+.PHONY : tutorials/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 # clean rule for target.
-clean: act1/CMakeFiles/_catkin_empty_exported_target.dir/clean
+clean: tutorials/CMakeFiles/_catkin_empty_exported_target.dir/clean
 
 .PHONY : clean
 

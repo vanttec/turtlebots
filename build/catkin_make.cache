@@ -1,2 +1,2 @@
-act1
+tutorials
 -DCATKIN_DEVEL_PREFIX=/home/ivan5d/turtlebots/devel -DCMAKE_INSTALL_PREFIX=/home/ivan5d/turtlebots/install -G Unix Makefiles
