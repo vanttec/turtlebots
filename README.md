@@ -1,55 +1,23 @@
-# Turtlebots
-Primera tarea:
-  - Hacer una copia local de este repositorio
-  - Crear una branch de main
-  - En tu nuevo branch, edita el readme
-  - Sube tus cambios y abre un pull request
-  - Muestra el pull request al supervisor
+<p align="center">
+  <img src="https://github.com/vanttec/vanttec_usv/blob/master/docs/LogoNegro_Azul.png" width="400" height="240" align="center"/>
+</p>
 
-**Turtlebots**
-- _Alex :D_
-- _Nombre_
-- _Nombre_
-- _Lucas o.o_
-- _Nombre_
-- _Nombre_
-- _Nombre_
-- AndresS_
-- _Nombre_
-- _Nombre_
-- _Nombre_
-- _Nombre_
-- _Javi ;)_
-- _Nombre_
-- _Nombre_
-- _Nombre_
+# VantTec Turtlebots Repository
 
-**Comandos importantes**
 
-Clonar un repositorio: 
+This is the working repository for Turtlebots course. Before you start be sure to meet the following requirements: 
 
-  `git clone <url repo remoto>`
-  
-Crear una branch  
-  ```bash
-  cd <nombre del repositorio>
-  git checkout -b <nombre de su branch> <branch base>
-  ```
-  
-Subir su branch a repo remoto
+```Shell
+- Ubuntu 18.04
+- ROS Melodic Morenia
+- Python 2
+```
 
-  `git push origin <branch>`
-  
-Añadir su nombre en su editor de texto favorito
+**How to start working?**
 
-Subir cambios a su branch
-  ```bash
-  git add <documentos>
-  git commit -m "Añade una descripción de lo que hiciste"
-  git push origin <nombre de su branch>
-  ```
-  
-En github:
-  Abrir un pull request hacia la branch determinada y seleccionar un reviewer (Iván, Saúl o Sebas)
-  Esperar autorización y hacer merge
-  
+
+Enter the following commands into your **Ubuntu 18.04** terminal:
+
+```Shell
+cd
+git clone https://github.com/vanttec/turtlebots.git 
