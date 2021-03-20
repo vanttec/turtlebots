@@ -13,7 +13,7 @@ Primera tarea:
 - _Nombre_
 - _Nombre_
 - _Nombre_
-- _Jair Barrera _
+- Jair Barrera 
 - _Nombre_
 - _Nombre_
 - _Nombre_
