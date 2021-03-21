@@ -10,7 +10,7 @@ Primera tarea:
 - _Alex :D_
 - _Santi :) (Nivel 13 en Bandit)_
 - _Nombre_
-- _Lucas o.o_
+- _Lucas o.o: Nivel 9_
 - _Nombre_
 - _Nombre_
 - Jair Barrera 
