@@ -7,19 +7,20 @@ Primera tarea:
   - Muestra el pull request al supervisor
 
 **Turtlebots**
+- _Alex :D_
 - _Nombre_
 - Santi :)
 - _Nombre_
-- _Nombre_
+- _Lucas o.o_
 - _Nombre_
 - _Nombre_
 - Jair Barrera 
+- AndresS_
 - _Nombre_
 - _Nombre_
 - _Nombre_
 - _Nombre_
-- _Nombre_
-- _Nombre_
+- _Javi ;)_
 - _Nombre_
 - _Nombre_
 - _Nombre_
