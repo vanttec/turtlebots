@@ -8,8 +8,7 @@ Primera tarea:
 
 **Turtlebots**
 - _Alex :D_
-- _Nombre_
-- Santi :)
+- _Santi :) (Nivel 13 en Bandit)_
 - _Nombre_
 - _Lucas o.o_
 - _Nombre_
