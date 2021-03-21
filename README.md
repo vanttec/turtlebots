@@ -13,7 +13,7 @@ Primera tarea:
 - _Lucas o.o_
 - _Nombre_
 - _Nombre_
-- _Nombre_
+- Jair Barrera 
 - AndresS_
 - _Nombre_
 - _Nombre_
