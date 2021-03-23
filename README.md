@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/vanttec/vanttec_usv/blob/master/docs/LogoNegro_Azul.png" width="400" height="240" align="center"/>
+  <img src="https://github.com/vanttec/turtlebots/blob/main/src/images/LogoAzul_Negro.png" width="400" height="240" align="center"/>
 </p>
 
 # VantTec Turtlebots Repository
