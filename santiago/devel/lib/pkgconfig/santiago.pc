@@ -1,0 +1,8 @@
+prefix=/home/santiago/Desktop/turtlebots/santiago/devel
+
+Name: santiago
+Description: Description of santiago
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
