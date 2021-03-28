@@ -1,2 +1,2 @@
-alex2:vanttec_uv_sim/sensors/realsense_gazebo_plugin:vanttec_uv_sim/sensors/sensor_plugins:vanttec_uv_sim/sensors/velodyne_simulator/velodyne_description:vanttec_uv_sim/sensors/velodyne_simulator/velodyne_gazebo_plugins:vanttec_uv_sim/sensors/velodyne_simulator/velodyne_simulator:vanttec_uv_sim/uv_worlds:vanttec_uv_sim/vtec_s3_description
+alex2:vanttec_uv_sim/uv_worlds:vanttec_uv_sim/vtec_s3_description
 -DCATKIN_DEVEL_PREFIX=/home/ivan5d/turtlebots/devel -DCMAKE_INSTALL_PREFIX=/home/ivan5d/turtlebots/install -G Unix Makefiles
