@@ -1,0 +1,8 @@
+prefix=/home/ivan5d/turtlebots/devel
+
+Name: alex2
+Description: Description of alex2
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
