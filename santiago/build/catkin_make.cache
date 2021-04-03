@@ -1,2 +1,0 @@
-santiago
--DCATKIN_DEVEL_PREFIX=/home/santiago/Desktop/turtlebots/santiago/devel -DCMAKE_INSTALL_PREFIX=/home/santiago/Desktop/turtlebots/santiago/install -G Unix Makefiles
