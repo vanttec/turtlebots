@@ -1,8 +1,0 @@
-prefix=/home/xaviar551/Desktop/turtlebots/javi/devel
-
-Name: javi
-Description: Description of javi
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
