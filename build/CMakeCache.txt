@@ -617,10 +617,10 @@ actionlib_DIR:PATH=/opt/ros/kinetic/share/actionlib/cmake
 actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 
 //Value Computed by CMake
-alex2_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/alex2
+alex2_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_ws/alex2
 
 //Value Computed by CMake
-alex2_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/alex2
+alex2_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_ws/alex2
 
 //The directory containing a CMake configuration file for bond.
 bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
@@ -645,6 +645,9 @@ cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
 
 //The directory containing a CMake configuration file for cv_bridge.
 cv_bridge_DIR:PATH=/opt/ros/kinetic/share/cv_bridge/cmake
+
+//The directory containing a CMake configuration file for diagnostic_msgs.
+diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
 
 //The directory containing a CMake configuration file for dynamic_reconfigure.
 dynamic_reconfigure_DIR:PATH=/opt/ros/kinetic/share/dynamic_reconfigure/cmake
@@ -734,8 +737,23 @@ ignition-math2_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/ignition-math2
 //The directory containing a CMake configuration file for image_transport.
 image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
 
+//The directory containing a CMake configuration file for interactive_markers.
+interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
+
+//Value Computed by CMake
+ivan_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_ws/ivan
+
+//Value Computed by CMake
+ivan_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_ws/ivan
+
+//Value Computed by CMake
+javi_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_ws/javi/src/javi
+
+//Value Computed by CMake
+javi_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_ws/javi/src/javi
+
 //Path to a library.
-lib:FILEPATH=/opt/ros/kinetic/lib/libtopic_tools.so
+lib:FILEPATH=/opt/ros/kinetic/lib/libxmlrpcpp.so
 
 //The directory containing a CMake configuration file for message_filters.
 message_filters_DIR:PATH=/opt/ros/kinetic/share/message_filters/cmake
@@ -745,6 +763,9 @@ message_generation_DIR:PATH=/opt/ros/kinetic/share/message_generation/cmake
 
 //The directory containing a CMake configuration file for message_runtime.
 message_runtime_DIR:PATH=/opt/ros/kinetic/share/message_runtime/cmake
+
+//The directory containing a CMake configuration file for nav_msgs.
+nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
 
 //The directory containing a CMake configuration file for nodelet.
 nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
@@ -785,6 +806,9 @@ rosbag_storage_DIR:PATH=/opt/ros/kinetic/share/rosbag_storage/cmake
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/kinetic/share/rosconsole/cmake
 
+//The directory containing a CMake configuration file for rosconsole_bridge.
+rosconsole_bridge_DIR:PATH=/opt/ros/kinetic/share/rosconsole_bridge/cmake
+
 //The directory containing a CMake configuration file for roscpp.
 roscpp_DIR:PATH=/opt/ros/kinetic/share/roscpp/cmake
 
@@ -799,6 +823,9 @@ rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
 
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
+
+//The directory containing a CMake configuration file for roslaunch.
+roslaunch_DIR:PATH=/opt/ros/kinetic/share/roslaunch/cmake
 
 //The directory containing a CMake configuration file for roslib.
 roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
@@ -817,6 +844,12 @@ rostest_DIR:PATH=/opt/ros/kinetic/share/rostest/cmake
 
 //The directory containing a CMake configuration file for rostime.
 rostime_DIR:PATH=/opt/ros/kinetic/share/rostime/cmake
+
+//Value Computed by CMake
+santiago_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_ws/santiago/src/santiago
+
+//Value Computed by CMake
+santiago_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_ws/santiago/src/santiago
 
 //The directory containing a CMake configuration file for sensor_msgs.
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
@@ -858,10 +891,82 @@ topic_tools_DIR:PATH=/opt/ros/kinetic/share/topic_tools/cmake
 trajectory_msgs_DIR:PATH=/opt/ros/kinetic/share/trajectory_msgs/cmake
 
 //Value Computed by CMake
+turtlebot3_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3
+
+//Value Computed by CMake
+turtlebot3_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3
+
+//Value Computed by CMake
+turtlebot3_bringup_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_bringup
+
+//Value Computed by CMake
+turtlebot3_bringup_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_bringup
+
+//Value Computed by CMake
+turtlebot3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_description
+
+//Value Computed by CMake
+turtlebot3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_description
+
+//Value Computed by CMake
+turtlebot3_example_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_example
+
+//Value Computed by CMake
+turtlebot3_example_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_example
+
+//Value Computed by CMake
+turtlebot3_fake_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3_simulations/turtlebot3_fake
+
+//Value Computed by CMake
+turtlebot3_fake_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3_simulations/turtlebot3_fake
+
+//Value Computed by CMake
+turtlebot3_gazebo_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3_simulations/turtlebot3_gazebo
+
+//Value Computed by CMake
+turtlebot3_gazebo_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3_simulations/turtlebot3_gazebo
+
+//Value Computed by CMake
+turtlebot3_msgs_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3_msgs
+
+//The directory containing a CMake configuration file for turtlebot3_msgs.
+turtlebot3_msgs_DIR:PATH=/home/ivan5d/turtlebots/devel/share/turtlebot3_msgs/cmake
+
+//Value Computed by CMake
+turtlebot3_msgs_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3_msgs
+
+//Value Computed by CMake
+turtlebot3_navigation_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_navigation
+
+//Value Computed by CMake
+turtlebot3_navigation_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_navigation
+
+//Value Computed by CMake
+turtlebot3_simulations_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3_simulations/turtlebot3_simulations
+
+//Value Computed by CMake
+turtlebot3_simulations_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3_simulations/turtlebot3_simulations
+
+//Value Computed by CMake
+turtlebot3_slam_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_slam
+
+//Value Computed by CMake
+turtlebot3_slam_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_slam
+
+//Value Computed by CMake
+turtlebot3_teleop_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/turtlebots_sim/turtlebot3/turtlebot3_teleop
+
+//Value Computed by CMake
+turtlebot3_teleop_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_teleop
+
+//Value Computed by CMake
 tutorials_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/tutorials
 
 //Value Computed by CMake
 tutorials_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/tutorials
+
+//The directory containing a CMake configuration file for urdf.
+urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
 
 //Value Computed by CMake
 uv_worlds_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim/uv_worlds
@@ -887,11 +992,17 @@ velodyne_simulator_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_si
 //Value Computed by CMake
 velodyne_simulator_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim/sensors/velodyne_simulator/velodyne_simulator
 
+//The directory containing a CMake configuration file for visualization_msgs.
+visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
+
 //Value Computed by CMake
 vtec_s3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim/vtec_s3_description
 
 //Value Computed by CMake
 vtec_s3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim/vtec_s3_description
+
+//The directory containing a CMake configuration file for xacro.
+xacro_DIR:PATH=/opt/ros/kinetic/share/xacro/cmake
 
 //The directory containing a CMake configuration file for xmlrpcpp.
 xmlrpcpp_DIR:PATH=/opt/ros/kinetic/share/xmlrpcpp/cmake
@@ -1048,7 +1159,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=25
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
