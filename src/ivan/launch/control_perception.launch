@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- Maintain name and type with the same parameter -->
+    <node pkg="ivan" type="control_uuv.py" name="control_uuv" output="screen"/>
+    <node pkg="ivan" type="perception_uuv.py" name="perception_uuv" />    
+</launch>
