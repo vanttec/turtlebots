@@ -1,0 +1,2 @@
+javi
+-DCATKIN_DEVEL_PREFIX=/home/xaviar551/Desktop/turtlebots/javi/devel -DCMAKE_INSTALL_PREFIX=/home/xaviar551/Desktop/turtlebots/javi/install -G Unix Makefiles
