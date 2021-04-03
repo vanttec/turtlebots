@@ -1,0 +1,8 @@
+prefix=/home/ivan5d/turtlebots/devel
+
+Name: turtlebot3_slam
+Description: Description of turtlebot3_slam
+Version: 1.2.4
+Cflags: -I/home/ivan5d/turtlebots/src/turtlebots_sim/turtlebot3/turtlebot3_slam/include
+Libs: -L${prefix}/lib 
+Requires: roscpp sensor_msgs
