@@ -34,6 +34,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 - _Alex :D_
 - AndresS_
 - _Javi ;)_  
+- Pau :)
 - _Nombre_
 - _..._
 
