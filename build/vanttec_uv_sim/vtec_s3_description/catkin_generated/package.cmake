@@ -1,6 +1,6 @@
 set(_CATKIN_CURRENT_PACKAGE "vtec_s3_description")
 set(vtec_s3_description_VERSION "0.0.0")
-set(vtec_s3_description_MAINTAINER "sebastian <sebastian@todo.todo>")
+set(vtec_s3_description_MAINTAINER "edison <edison@todo.todo>")
 set(vtec_s3_description_PACKAGE_FORMAT "2")
 set(vtec_s3_description_BUILD_DEPENDS )
 set(vtec_s3_description_BUILD_EXPORT_DEPENDS )

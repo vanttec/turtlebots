@@ -56,27 +56,16 @@ CMAKE_BINARY_DIR = /home/ivan5d/turtlebots/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
 
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
 
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
+.PHONY : rebuild_cache/fast
 
 # Special rule for the target edit_cache
 edit_cache:
@@ -89,17 +78,6 @@ edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -110,6 +88,16 @@ install/local: preinstall
 install/local/fast: install/local
 
 .PHONY : install/local/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -132,6 +120,18 @@ test:
 test/fast: test
 
 .PHONY : test/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -180,6 +180,156 @@ turtlebot3_fake_node/fast:
 	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_fake_node.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_fake_node.dir/build
 .PHONY : turtlebot3_fake_node/fast
 
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_lisp: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_lisp
+
+# fast build rule for target.
+nav_msgs_generate_messages_lisp/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+.PHONY : nav_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+turtlebot3_msgs_generate_messages_py: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/rule
+
+.PHONY : turtlebot3_msgs_generate_messages_py
+
+# fast build rule for target.
+turtlebot3_msgs_generate_messages_py/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_py.dir/build
+.PHONY : turtlebot3_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_nodejs: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : nav_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+nav_msgs_generate_messages_nodejs/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+.PHONY : nav_msgs_generate_messages_nodejs/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+turtlebot3_msgs_generate_messages_cpp: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : turtlebot3_msgs_generate_messages_cpp
+
+# fast build rule for target.
+turtlebot3_msgs_generate_messages_cpp/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_cpp.dir/build
+.PHONY : turtlebot3_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_cpp: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : nav_msgs_generate_messages_cpp
+
+# fast build rule for target.
+nav_msgs_generate_messages_cpp/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+.PHONY : nav_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_py: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+
+.PHONY : nav_msgs_generate_messages_py
+
+# fast build rule for target.
+nav_msgs_generate_messages_py/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+.PHONY : nav_msgs_generate_messages_py/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+turtlebot3_msgs_generate_messages_eus: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/rule
+
+.PHONY : turtlebot3_msgs_generate_messages_eus
+
+# fast build rule for target.
+turtlebot3_msgs_generate_messages_eus/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_eus.dir/build
+.PHONY : turtlebot3_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+turtlebot3_msgs_generate_messages_lisp: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : turtlebot3_msgs_generate_messages_lisp
+
+# fast build rule for target.
+turtlebot3_msgs_generate_messages_lisp/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_lisp.dir/build
+.PHONY : turtlebot3_msgs_generate_messages_lisp/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+nav_msgs_generate_messages_eus: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+
+.PHONY : nav_msgs_generate_messages_eus
+
+# fast build rule for target.
+nav_msgs_generate_messages_eus/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+.PHONY : nav_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f CMakeFiles/Makefile2 turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/rule
+.PHONY : turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+turtlebot3_msgs_generate_messages_nodejs: turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : turtlebot3_msgs_generate_messages_nodejs
+
+# fast build rule for target.
+turtlebot3_msgs_generate_messages_nodejs/fast:
+	cd /home/ivan5d/turtlebots/build && $(MAKE) -f turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/build.make turtlebots_sim/turtlebot3_simulations/turtlebot3_fake/CMakeFiles/turtlebot3_msgs_generate_messages_nodejs.dir/build
+.PHONY : turtlebot3_msgs_generate_messages_nodejs/fast
+
 src/turtlebot3_fake.o: src/turtlebot3_fake.cpp.o
 
 .PHONY : src/turtlebot3_fake.o
@@ -213,14 +363,24 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... list_install_components"
-	@echo "... install"
-	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... turtlebot3_fake_node"
+	@echo "... edit_cache"
 	@echo "... install/local"
+	@echo "... turtlebot3_fake_node"
+	@echo "... nav_msgs_generate_messages_lisp"
+	@echo "... list_install_components"
 	@echo "... install/strip"
+	@echo "... turtlebot3_msgs_generate_messages_py"
+	@echo "... nav_msgs_generate_messages_nodejs"
+	@echo "... turtlebot3_msgs_generate_messages_cpp"
 	@echo "... test"
+	@echo "... nav_msgs_generate_messages_cpp"
+	@echo "... install"
+	@echo "... nav_msgs_generate_messages_py"
+	@echo "... turtlebot3_msgs_generate_messages_eus"
+	@echo "... turtlebot3_msgs_generate_messages_lisp"
+	@echo "... nav_msgs_generate_messages_eus"
+	@echo "... turtlebot3_msgs_generate_messages_nodejs"
 	@echo "... src/turtlebot3_fake.o"
 	@echo "... src/turtlebot3_fake.i"
 	@echo "... src/turtlebot3_fake.s"
