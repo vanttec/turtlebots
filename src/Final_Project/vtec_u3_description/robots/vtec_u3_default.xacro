@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<robot name="vtec_u3" xmlns:xacro="http://www.ros.org/wiki/xacro" >
+  <xacro:arg name="debug" default="0"/>
+  <xacro:arg name="namespace" default="vtec_u3"/>
+  <xacro:arg name="inertial_reference_frame" default="world_ned"/>
+  <!-- Include the UUV macro file -->
+  <xacro:include filename="$(find vtec_u3_description)/urdf/base.xacro"/>
+
+  <!-- Create the vtec_u3 -->
+  <xacro:vtec_u3_base namespace="$(arg namespace)">
+    <gazebo>
+
+    </gazebo>
+  </xacro:vtec_u3_base>
+
+  <!-- Joint state publisher plugin -->
+  <!-- <xacro:default_joint_state_publisher namespace="$(arg namespace)" update_rate="10"/> -->
+
+  <gazebo>
+  <plugin name="object_controller" filename="libgazebo_ros_planar_move.so">
+    <commandTopic>/teleop</commandTopic>
+    <odometryTopic>odom</odometryTopic>
+    <odometryFrame>odom</odometryFrame>
+    <odometryRate>20.0</odometryRate>
+    <robotBaseFrame>vtec_u3</robotBaseFrame>
+    <publishTF>false</publishTF>
+  </plugin>
+</gazebo>
+
+</robot>
