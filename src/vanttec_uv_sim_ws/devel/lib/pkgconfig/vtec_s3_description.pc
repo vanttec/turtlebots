@@ -1,8 +1,0 @@
-prefix=/home/ivan5d/vanttec_uv_sim_ws/devel
-
-Name: vtec_s3_description
-Description: Description of vtec_s3_description
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
