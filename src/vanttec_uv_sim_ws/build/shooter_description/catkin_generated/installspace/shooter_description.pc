@@ -1,0 +1,8 @@
+prefix=/home/ivan5d/vanttec_uv_sim_ws/install
+
+Name: shooter_description
+Description: Description of shooter_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
