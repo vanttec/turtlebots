@@ -789,13 +789,13 @@ pcl_ros_DIR:PATH=/opt/ros/kinetic/share/pcl_ros/cmake
 pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
 //Value Computed by CMake
-realsense_gazebo_plugin_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sensors/realsense_gazebo_plugin
+realsense_gazebo_plugin_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sensors/realsense_gazebo_plugin
 
 //Dependencies for the target
 realsense_gazebo_plugin_LIB_DEPENDS:STATIC=general;/opt/ros/kinetic/lib/libgazebo_ros_api_plugin.so;general;/opt/ros/kinetic/lib/libgazebo_ros_paths_plugin.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/opt/ros/kinetic/lib/libdynamic_reconfigure_config_init_mutex.so;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml2.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libcamera_info_manager.so;general;/opt/ros/kinetic/lib/libcamera_calibration_parsers.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libcv_bridge.so;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_core3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgproc3.so.3.3.1;general;/opt/ros/kinetic/lib/x86_64-linux-gnu/libopencv_imgcodecs3.so.3.3.1;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;
 
 //Value Computed by CMake
-realsense_gazebo_plugin_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sensors/realsense_gazebo_plugin
+realsense_gazebo_plugin_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sensors/realsense_gazebo_plugin
 
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/kinetic/share/rosbag/cmake
@@ -855,22 +855,22 @@ santiago_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/turtlebots_ws/santiago/sr
 sensor_msgs_DIR:PATH=/opt/ros/kinetic/share/sensor_msgs/cmake
 
 //Value Computed by CMake
-sensor_plugins_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sensors/sensor_plugins
+sensor_plugins_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sensors/sensor_plugins
 
 //Value Computed by CMake
-sensor_plugins_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sensors/sensor_plugins
+sensor_plugins_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sensors/sensor_plugins
 
 //Value Computed by CMake
-shooter_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/shooter_description
+shooter_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/shooter_description
 
 //Value Computed by CMake
-shooter_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/shooter_description
+shooter_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/shooter_description
 
 //Value Computed by CMake
-sim_challenges_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sim_challenges
+sim_challenges_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sim_challenges
 
 //Value Computed by CMake
-sim_challenges_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sim_challenges
+sim_challenges_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sim_challenges
 
 //Dependencies for the target
 sixDOFMov_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libgazebo.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_client.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gui.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_sensors.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_rendering.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_physics.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_transport.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_msgs.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_util.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_common.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opcode.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_math.so;general;/usr/lib/x86_64-linux-gnu/libgazebo_ccd.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/usr/lib/x86_64-linux-gnu/libboost_iostreams.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libprotobuf.so;debug;/usr/lib/x86_64-linux-gnu/libprotobuf.so;general;-lpthread;general;/usr/lib/x86_64-linux-gnu/libsdformat.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;general;/usr/lib/x86_64-linux-gnu/libignition-math2.so;
@@ -984,43 +984,43 @@ tutorials_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/tutorials
 urdf_DIR:PATH=/opt/ros/kinetic/share/urdf/cmake
 
 //Value Computed by CMake
-uv_worlds_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/uv_worlds
+uv_worlds_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/uv_worlds
 
 //Value Computed by CMake
-uv_worlds_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/uv_worlds
+uv_worlds_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/uv_worlds
 
 //Value Computed by CMake
-velodyne_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_description
+velodyne_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sensors/velodyne_simulator/velodyne_description
 
 //Value Computed by CMake
-velodyne_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_description
+velodyne_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sensors/velodyne_simulator/velodyne_description
 
 //Value Computed by CMake
-velodyne_gazebo_plugins_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_gazebo_plugins
+velodyne_gazebo_plugins_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sensors/velodyne_simulator/velodyne_gazebo_plugins
 
 //Value Computed by CMake
-velodyne_gazebo_plugins_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_gazebo_plugins
+velodyne_gazebo_plugins_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sensors/velodyne_simulator/velodyne_gazebo_plugins
 
 //Value Computed by CMake
-velodyne_simulator_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_simulator
+velodyne_simulator_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/sensors/velodyne_simulator/velodyne_simulator
 
 //Value Computed by CMake
-velodyne_simulator_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/sensors/velodyne_simulator/velodyne_simulator
+velodyne_simulator_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/sensors/velodyne_simulator/velodyne_simulator
 
 //The directory containing a CMake configuration file for visualization_msgs.
 visualization_msgs_DIR:PATH=/opt/ros/kinetic/share/visualization_msgs/cmake
 
 //Value Computed by CMake
-vtec_s3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/vtec_s3_description
+vtec_s3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/vtec_s3_description
 
 //Value Computed by CMake
-vtec_s3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/vtec_s3_description
+vtec_s3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/vtec_s3_description
 
 //Value Computed by CMake
-vtec_u3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/vanttec_uv_sim_ws/src/vtec_u3_description
+vtec_u3_description_BINARY_DIR:STATIC=/home/ivan5d/turtlebots/build/Final_Project/vtec_u3_description
 
 //Value Computed by CMake
-vtec_u3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/vanttec_uv_sim_ws/src/vtec_u3_description
+vtec_u3_description_SOURCE_DIR:STATIC=/home/ivan5d/turtlebots/src/Final_Project/vtec_u3_description
 
 //The directory containing a CMake configuration file for xacro.
 xacro_DIR:PATH=/opt/ros/kinetic/share/xacro/cmake
