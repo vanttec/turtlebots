@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 
+#---------------------------No mover--------------------
 import rospy
 import keyboard 
 from geometry_msgs.msg import Twist
@@ -29,53 +30,49 @@ def getKey():
     return key
 
 def add_noise(img):
-  
     # Getting the dimensions of the image
     row, col, a= img.shape
-      
     # Randomly pick some pixels in the
     # image for coloring them white
     # Pick a random number between 300 and 10000
     number_of_pixels = random.randint(300, 10000)
     for i in range(number_of_pixels):
-        
         # Pick a random y coordinate
         y_coord=random.randint(0, row - 1)
-          
         # Pick a random x coordinate
         x_coord=random.randint(0, col - 1)
-          
         # Color that pixel to white
         img[y_coord][x_coord] = 255
-          
     # Randomly pick some pixels in
     # the image for coloring them black
     # Pick a random number between 300 and 10000
     number_of_pixels = random.randint(300 , 10000)
     for i in range(number_of_pixels):
-        
         # Pick a random y coordinate
         y_coord=random.randint(0, row - 1)
-          
         # Pick a random x coordinate
         x_coord=random.randint(0, col - 1)
-          
         # Color that pixel to black
         img[y_coord][x_coord] = 0
-          
+
     return img
 
+#-------------------------------------------No mover---------------------
+
 def opencv_bridge(data, key):
-    
+
     bridge = CvBridge()
     cv_image = bridge.imgmsg_to_cv2(data, "bgr8")
     img = cv2.cvtColor(cv_image,cv2.COLOR_BGR2RGB)
+    
+    #Imagen opencv con noise
     cv_2 = add_noise(cv_image)
-    #median = cv2.medianBlur(img,5)
     cv2.imshow("Image window", cv_2)
-    #cv2.imshow("Image window median", median)
 
-    if cv2.waitKey(10) & (key == 'p'):
+    median = cv2.medianBlur(img,5)
+    cv2.imshow("Image window median", median)
+
+    if cv2.waitKey(10) & (key =='p'):
         global counter
         counter +=1
         cv2.imwrite('/home/ivan5d/Pictures/VantTec/foto_' +str(counter) + '.jpg', cv_image)
@@ -106,24 +103,18 @@ def callback(data):
 
     """
     key = getKey()
-    #Forwards
+    #Left
     if key=='a':
         twist.linear.y = v_lin 
     #Right
     elif key=='d':
         twist.linear.y = -1*v_lin 
-    #Left
+    #Forward
     elif key=='w':
         twist.linear.x = v_lin
     #Backwards
     elif key=='s':
-        twist.linear.x = -1*v_lin 
-    #z down
-    elif key=='l':
-        twist.linear.z = -1*v_ang
-    #z up
-    elif key=='k':
-        twist.angular.y = v_ang     
+        twist.linear.x = -1*v_lin    
     #Right yaw
     elif key=='i':
         twist.angular.z = v_ang
