@@ -47,7 +47,7 @@ def add_noise(img):
     # the image for coloring them black
     # Pick a random number between 300 and 10000
     number_of_pixels = random.randint(300 , 10000)
-    for i in range(number_of_pixels):
+    for j in range(number_of_pixels):
         # Pick a random y coordinate
         y_coord=random.randint(0, row - 1)
         # Pick a random x coordinate
@@ -63,15 +63,11 @@ def opencv_bridge(data, key):
 
     bridge = CvBridge()
     cv_image = bridge.imgmsg_to_cv2(data, "bgr8")
-    img = cv2.cvtColor(cv_image,cv2.COLOR_BGR2RGB)
-    
     #Imagen opencv con noise
     cv_2 = add_noise(cv_image)
-    cv2.imshow("Image window", cv_2)
-
-    median = cv2.medianBlur(img,5)
-    cv2.imshow("Image window median", median)
-
+    cv2.imshow("Image w/noise", cv_2)
+    median = cv2.medianBlur(cv_image, 5)
+    cv2.imshow("Image filtered", median)
     if cv2.waitKey(10) & (key =='p'):
         global counter
         counter +=1
@@ -129,7 +125,7 @@ def callback(data):
     rate.sleep()    
 
 def image_subscriber():
-     #/frontr200/camera/color/image_raw [sensor_msgs/Image]
+    #Topic: /frontr200/camera/color/image_raw [sensor_msgs/Image]
     rospy.init_node('Teleop', anonymous=True)
     rospy.Subscriber("/frontr200/camera/color/image_raw", Image, callback) #Callback
     rospy.spin()

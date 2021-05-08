@@ -9,8 +9,8 @@
 
   <!-- Vehicle's initial pose -->
   <arg name="x"     default="0"/>
-  <arg name="y"     default="0"/>
-  <arg name="z"     default="-2"/>
+  <arg name="y"     default="10"/>
+  <arg name="z"     default="-55"/>
   <arg name="roll"  default="0"/>
   <arg name="pitch" default="0"/>
   <arg name="yaw"   default="0"/>
@@ -60,7 +60,7 @@
     <param name="robot_description"
           command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/pathmarker.xacro' "/> 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-          args="-x 4 -y 0 -z -4 -urdf -param robot_description -model path_marker"/>
+          args="-x 4 -y 10 -z -55 -urdf -param robot_description -model path_marker"/>
   </group> 
   
   <!-- Begin Gate -->
@@ -68,7 +68,7 @@
     <param name="robot_description"
       command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/gate.xacro' "/>  
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-x 7 -y 0 -z -4 -urdf -param robot_description -model gate_1"/> 
+          args="-x 7 -y 10 -z -55 -urdf -param robot_description -model gate_1"/> 
   </group>
 
   <!-- Begin Buoy1 (GUN) -->
@@ -76,7 +76,7 @@
     <param name="robot_description"
       command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/buoy.xacro' "/> 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-      args="-x 9 -y 0 -z -4 -urdf -param robot_description -model buoy_1"/> 
+          args="-x 9 -y 10 -z -55 -urdf -param robot_description -model buoy_1"/> 
   </group> 
 
     <!-- Begin Buoy2 (Badge) -->
@@ -84,7 +84,7 @@
     <param name="robot_description"
       command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/buoy2.xacro' "/> 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-      args="-x 9 -y 0 -z -4 -urdf -param robot_description -model buoy_2"/> 
+          args="-x 9 -y 10 -z -55 -urdf -param robot_description -model buoy_2"/> 
   </group> 
 
   <!-- Begin Bin1-->
@@ -92,7 +92,7 @@
     <param name="robot_description"
           command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/bin1.xacro' "/> 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-          args="-x 10 -y 0 -z -4 -urdf -param robot_description -model bin_1"/>
+          args="-x 10 -y 10 -z -59 -urdf -param robot_description -model bin_1"/>
   </group>
 
 </launch>
