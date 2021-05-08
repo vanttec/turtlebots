@@ -1,19 +1,19 @@
 ## Turtlebots
 
-#### Actividad 2: 
+#### Final Project: 
 
-<p align="left">
-  <img src="https://github.com/vanttec/turtlebots/blob/5ef8b54bc3199e1bc85476b46d7c725b161ff31f/src/images/uv.png" width="400" height="240" align="center"/>
+<p align="center">
+  <img src="https://github.com/vanttec/turtlebots/blob/2993d998574ae126dddb30c445a01d41a47d21c5/src/images/final_project.png" width="600" height="340" align="center"/>
 </p>
 
-La competencia de RoboBoat tomará lugar en línea y se necesita que cada equipo envíe un simulador de su usv desplegado en Gazebo, pues ahí se mostrarán los retos de la competencia. 
-
-1) Modifica *scripts/perception_uuv* para volverlo un subscriber del tópico */r200/camera/color/image_raw* proveniente del simulador.     
-2) Crea el launch file *launch/turtlebots.launch* que despliegue *vtec_s3_description/upload.launch* y el rosnode *perception_uuv* modificado. 
+La competencia de RoboBoat tomará lugar en línea y se necesita que cada equipo envíe un simulador de su usv desplegado en Gazebo, pues ahí se mostrarán los retos de la competencia. Así que sigue la presentación y realiza todas las actividades mostradas.
 
 #### Comentarios:
-Para comprobar corre: 
-```
-roslaunch uv_worlds lake.launch
-roslaunch [nombre] turtlebots.launch 
-```
+
+Directorios necesitados y su función: 
+
+- vtec_u3_description: tiene descripción del modelo del submarino, tiene el archivo.launch principal y el script.py para manejar el submarino desde el teclado (teleop). 
+
+- sim_challenges: tiene los archivos .dae (piezas de Solidworks) de cada prop y los archivos.xacro para desplegarlos en Gazebo.
+
+- uv_worlds: tiene los mundos acuáticos y código necesario para desplegarse en Gazebo. 
