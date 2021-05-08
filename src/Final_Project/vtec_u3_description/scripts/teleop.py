@@ -60,7 +60,6 @@ def add_noise(img):
 #-------------------------------------------No mover---------------------
 
 def opencv_bridge(data, key):
-
     bridge = CvBridge()
     cv_image = bridge.imgmsg_to_cv2(data, "bgr8")
     #Imagen opencv con noise
@@ -118,6 +117,7 @@ def callback(data):
     elif key=='o':
         twist.angular.z = -1*v_ang
     print (msg)
+    
     pub = rospy.Publisher('/teleop', Twist, queue_size=10)
     rate = rospy.Rate(10)
     pub.publish(twist)
