@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 
-#---------------------------No mover--------------------
+#<!--////////////////////////////////////////////////////////////////////////////// -->
+#<!--//////////////////////////////INICIO NO MOVER///////////////////////////////// -->
+#<!--////////////////////////////////////////////////////////////////////////////// -->
 import rospy
 import keyboard 
-from geometry_msgs.msg import Twist
-from sensor_msgs.msg import Image
+from geometry_msgs.msg import Twist #Importa tipo ros msg tipo Twist
+from sensor_msgs.msg import Image #Importa ros msg tipo Imagen
 from cv_bridge import CvBridge, CvBridgeError
 import cv2
 import random
@@ -18,6 +20,7 @@ else:
 counter = 0
 
 def getKey():
+    '''Esta funcion recibe la tecla del keyboard, no modificar'''
     if os.name == 'nt':
         return msvcrt.getch()
     tty.setraw(sys.stdin.fileno())
@@ -30,6 +33,7 @@ def getKey():
     return key
 
 def add_noise(img):
+    '''Esta funcion agrega el salt and pepper noise, no modificar'''
     # Getting the dimensions of the image
     row, col, a= img.shape
     # Randomly pick some pixels in the
@@ -57,27 +61,38 @@ def add_noise(img):
 
     return img
 
-#-------------------------------------------No mover---------------------
+#<!--////////////////////////////////////////////////////////////////////////////// -->
+#<!--/////////////////////////////FIN NO MOVER///////////////////////////////////// -->
+#<!--////////////////////////////////////////////////////////////////////////////// -->
 
-def opencv_bridge(data, key):
+def opencv_bridge(ros_msg_imagen, tecla_keyboard):
+    '''Esta funcion crea el bridge para poder convertir el ROS msg/imagen a una
+    imagen que puede ser modificada por opencv'''
+    #Crea un objeto que adquiera las caracteristicas de la clase CvBridge()
     bridge = CvBridge()
-    cv_image = bridge.imgmsg_to_cv2(data, "bgr8")
-    #Imagen opencv con noise
-    cv_2 = add_noise(cv_image)
+    #Convierte el ros msg/imagen en una imagen bgr8 (blue, green,red, 8 bits) 
+    cv_image = bridge.imgmsg_to_cv2(ros_msg_imagen, "bgr8")
+    cv_2 = add_noise(cv_image) #opencv image con salt and pepper noise
+    #Despliega la opencv image con ruido 
     cv2.imshow("Image w/noise", cv_2)
+    #Aplica un filtro medianBlur de opencv con los parametros (imagen, 5) 
     median = cv2.medianBlur(cv_image, 5)
+    #DEspliega la opencv image sin ruido
     cv2.imshow("Image filtered", median)
-    if cv2.waitKey(10) & (key =='p'):
+    if cv2.waitKey(10) & (tecla_keyboard =='p'): #Espera 10 milisegundos y con la tecla p toma foto.
         global counter
         counter +=1
-        cv2.imwrite('/home/ivan5d/Pictures/VantTec/foto_' +str(counter) + '.jpg', cv_image)
+        #usa la funcion imwrite de cv2 (opencv) y modifica el path para ti.
+        # cv2.imwrite(path, imagen_a_guardar) 
+        cv2.imwrite('/home/ivan5d/Pictures/VantTec/foto_' +str(counter) + '.jpg', median)
 
-#--------------------------------------------
-#Publisher
-def callback(data):
-    v_lin = 0.8
-    v_ang = 0.8
+def callback(ros_msg_imagen):
+    '''Esta funcion recibe una imagen y llama el opencv_bridge, ademas desde 
+    aqui se opera el submarino desde la terminal (telleop)''' 
+    
+    #Crea un objeto que adquiera las caracteristicas de la clase Twist()
     twist=Twist() 
+    
     msg = """
 
     ---------------------------
@@ -97,43 +112,69 @@ def callback(data):
     CTRL-C to quit
 
     """
-    key = getKey()
-    #Left
-    if key=='a':
-        twist.linear.y = v_lin 
-    #Right
-    elif key=='d':
-        twist.linear.y = -1*v_lin 
-    #Forward
-    elif key=='w':
-        twist.linear.x = v_lin
-    #Backwards
-    elif key=='s':
-        twist.linear.x = -1*v_lin    
-    #Right yaw
-    elif key=='i':
-        twist.angular.z = v_ang
-    #Left yaw 
-    elif key=='o':
-        twist.angular.z = -1*v_ang
-    print (msg)
+    tecla_keyboard = getKey() #Recibe la tecla seleccionada del keyboard
+    v_lin = 0.8 #Velocidad lineal 
+    v_ang = 0.8 #Velocidad angular
     
+    #Submarino hacia la izquierda 
+    if tecla_keyboard=='a':
+        #objeto.tipo_de_movimiento.componente_y = v_lin
+        twist.linear.y = v_lin 
+    #Submarino hacia la derecha
+    elif tecla_keyboard=='d':
+        twist.linear.y = -1*v_lin 
+    #Submarino hacia enfrente
+    elif tecla_keyboard=='w':
+    #objeto.tipo_de_movimiento.componente_x = v_lin
+        twist.linear.x = v_lin
+    #Submarino hacia atras
+    elif tecla_keyboard=='s':
+        twist.linear.x = -1*v_lin    
+    #Submarino gira hacia la izquierda
+    elif tecla_keyboard=='i':
+        twist.angular.z = v_ang
+    #Submarino gira hacia la derecha
+    elif tecla_keyboard=='o':
+        twist.angular.z = -1*v_ang
+    print (msg) #Printea el mensaje en la terminal 
+
+    #Crea un objeto pub = rospy.Publisher (/topico, tipo de mensaje, queue_size=10)
     pub = rospy.Publisher('/teleop', Twist, queue_size=10)
-    rate = rospy.Rate(10)
+
+    rate = rospy.Rate(10) #10 Hz
+
+    #publica con pub.publish(tipo de mensaje)
     pub.publish(twist)
-    opencv_bridge(data, key)
-    rate.sleep()    
+    
+    #Llama la funcion opencv_bridge con los parametros imagen y tecla_keyboard
+    opencv_bridge(ros_msg_imagen, tecla_keyboard)
+    
+    rate.sleep() 
 
 def image_subscriber():
-    #Topic: /frontr200/camera/color/image_raw [sensor_msgs/Image]
+    ''' Funcion principal, aqui se define el nodo subscriber y el topico usado
+    para recibir esa informacion''' 
+    #Define el nodo con el parametro anonymous=True
     rospy.init_node('Teleop', anonymous=True)
+    #Subscribete al topico: /frontr200/camera/color/image_raw, recibe un ROS msg tipo [sensor_msgs/Image]
+    #recuerda que cuando se recibe un mensaje se activa la funcion callback.
     rospy.Subscriber("/frontr200/camera/color/image_raw", Image, callback) #Callback
+    #Evita que el nodo se cierre
     rospy.spin()
 
+#<!--////////////////////////////////////////////////////////////////////////////// -->
+#<!--//////////////////////////INICIO NO MOVER///////////////////////////////////// -->
+#<!--////////////////////////////////////////////////////////////////////////////// -->
+
+#Linea 143 y 144 son utilizadas para poder usar las teclas de la computadora.
 if __name__ == '__main__':
     if os.name != 'nt':
         settings = termios.tcgetattr(sys.stdin)
     try:
+        #Corre la funcion principal
         image_subscriber()
     except rospy.ROSInterruptException:
         pass
+#<!--////////////////////////////////////////////////////////////////////////////// -->
+#<!--/////////////////////////////FIN NO MOVER///////////////////////////////////// -->
+#<!--////////////////////////////////////////////////////////////////////////////// -->
