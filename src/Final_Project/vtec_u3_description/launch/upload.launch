@@ -72,11 +72,9 @@
     x,y,z además de aquellas por default: -urdf -param robot_description -model <<nombre_del_prop>>--> 
   </group> 
   
-  <!-- Escribe aqui: inicializa el grupo <<Gate>> con coordenadas en gazebo x=4, y=10, z=-55 -->
+  <!-- Escribe aqui: inicializa el grupo <<Gate>> con coordenadas en gazebo x=7, y=10, z=-55 -->
 
   <!-- Escribe aqui: inicializa el grupo <<Buoy1>> con coordenadas en gazebo x=9, y=10, z=-55 -->
-
-  <!-- Escribe aqui: inicializa el grupo <<Buoy2>> con coordenadas en gazebo x=9, y=10, z=-55 -->
 
   <!-- Escribe aqui: inicializa el grupo <<Buoy2>> con coordenadas en gazebo x=9, y=10, z=-55 -->
 
