@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
+<!-- Con este archivo.xacro te puedes guiar para hacer los otros, si tienes duda 
+de lo que se debe cambiar sigue la presentacion <<Proyecto Final>>> -->
+
 <robot name="bin_1" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<!-- Introducir meshes -->
 <xacro:property name="visual_mesh_file" value="file://$(find sim_challenges)/models/meshes/bin.dae" />
-
-<!-- <origin xyz="0.085 (0 -0.085) 0 0" rpy="0.0 0.0 1.57075"/> -->
 
 <link name="bin1_base">
     <visual>
@@ -14,7 +14,6 @@
         </geometry>
     </visual>
 
-        <!-- Se deben cambiar los parametros reales-->
     <collision>
       <origin xyz="10 0 0" rpy="0.0 0.0 -1.57"/>
       <geometry>
@@ -31,6 +30,7 @@
         izz="1.0"/>
     </inertial>
 </link>
+
 <gazebo reference="bin1_base">
   <selfCollide>0</selfCollide>
   <turnGravityOff>1</turnGravityOff>
