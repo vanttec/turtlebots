@@ -3,12 +3,12 @@
 #<!--////////////////////////////////////////////////////////////////////////////// -->
 #<!--//////////////////////////////INICIO NO MOVER///////////////////////////////// -->
 #<!--////////////////////////////////////////////////////////////////////////////// -->
-import rospy
-import keyboard 
+import rospy #Importa rospy
+import keyboard #Importa keyboard
 from geometry_msgs.msg import Twist #Importa tipo ros msg tipo Twist
 from sensor_msgs.msg import Image #Importa ros msg tipo Imagen
-from cv_bridge import CvBridge, CvBridgeError
-import cv2
+from cv_bridge import CvBridge, CvBridgeError #Importa opencv_bridge
+import cv2 #Importa opencv
 import random
 
 import sys, select, os
@@ -68,30 +68,40 @@ def add_noise(img):
 def opencv_bridge(ros_msg_imagen, tecla_keyboard):
     '''Esta funcion crea el bridge para poder convertir el ROS msg/imagen a una
     imagen que puede ser modificada por opencv'''
-    #Crea un objeto que adquiera las caracteristicas de la clase CvBridge()
-    bridge = CvBridge()
-    #Convierte el ros msg/imagen en una imagen bgr8 (blue, green,red, 8 bits) 
-    cv_image = bridge.imgmsg_to_cv2(ros_msg_imagen, "bgr8")
-    cv_2 = add_noise(cv_image) #opencv image con salt and pepper noise
-    #Despliega la opencv image con ruido 
-    cv2.imshow("Image w/noise", cv_2)
-    #Aplica un filtro medianBlur de opencv con los parametros (imagen, 5) 
-    median = cv2.medianBlur(cv_image, 5)
-    #DEspliega la opencv image sin ruido
-    cv2.imshow("Image filtered", median)
+
+    #Crea un objeto llamado <<bridge>> que adquiera las caracteristicas de la clase CvBridge()
+    #-Escribe aqui
+
+    #Convierte el ros msg/imagen en una imagen bgr8 (blue, green,red, 8 bits),
+    # guarda esa imagen en la variable <<cv_image>>
+    #-Escribe aqui
+
+    cv_image_with_noise = add_noise(cv_image) #opencv image con salt and pepper noise
+
+    # Muestra la opencv_image con ruido con .imshow de opencv
+    #-Escribe aqui
+
+    # Aplica un filtro medianBlur de opencv con los parametros (cv_image_with_noise, 5) y
+    # guarda el resultado en la variable <<cv_image_filtered>>
+    #-Escribe aqui
+
+    # Muestra la opencv image filtrada con .imshow
+    #-Escribe aqui
+
     if cv2.waitKey(10) & (tecla_keyboard =='p'): #Espera 10 milisegundos y con la tecla p toma foto.
         global counter
         counter +=1
-        #usa la funcion imwrite de cv2 (opencv) y modifica el path para ti.
-        # cv2.imwrite(path, imagen_a_guardar) 
-        cv2.imwrite('/home/ivan5d/Pictures/VantTec/foto_' +str(counter) + '.jpg', median)
+        #usa .imwrite de opencv (cv2) para guardar la cv_image_filtered, este metodo 
+        # tiene dos argumentos (path, imagen_a_guardar)
+        #-Escribe aqui
 
 def callback(ros_msg_imagen):
     '''Esta funcion recibe una imagen y llama el opencv_bridge, ademas desde 
-    aqui se opera el submarino desde la terminal (telleop)''' 
+    aqui se opera el submarino desde la terminal (teleop)''' 
     
-    #Crea un objeto que adquiera las caracteristicas de la clase Twist()
-    twist=Twist() 
+    #Crea un objeto llamado <<twist>> que adquiera las caracteristicas de la clase Twist()
+    # este es el tipo de mensaje que el submarino necesita para moverse por gazebo
+    #-Escribe aqui 
     
     msg = """
 
@@ -119,48 +129,50 @@ def callback(ros_msg_imagen):
     #Submarino hacia la izquierda 
     if tecla_keyboard=='a':
         #objeto.tipo_de_movimiento.componente_y = v_lin
-        twist.linear.y = v_lin 
+        #-Escribe aqui
     #Submarino hacia la derecha
     elif tecla_keyboard=='d':
-        twist.linear.y = -1*v_lin 
+        #-Escribe aqui
     #Submarino hacia enfrente
     elif tecla_keyboard=='w':
     #objeto.tipo_de_movimiento.componente_x = v_lin
-        twist.linear.x = v_lin
+        #-Escribe aqui
     #Submarino hacia atras
     elif tecla_keyboard=='s':
-        twist.linear.x = -1*v_lin    
+        #-Escribe aqui   
     #Submarino gira hacia la izquierda
     elif tecla_keyboard=='i':
-        twist.angular.z = v_ang
+    #objeto.tipo_de_movimiento.componente_z = v_ang    
+        #-Escribe aqui
     #Submarino gira hacia la derecha
     elif tecla_keyboard=='o':
-        twist.angular.z = -1*v_ang
+        #-Escribe aqui
     print (msg) #Printea el mensaje en la terminal 
 
-    #Crea un objeto pub = rospy.Publisher (/topico, tipo de mensaje, queue_size=10)
-    pub = rospy.Publisher('/teleop', Twist, queue_size=10)
+    #Crea un objeto <<pub>> con pub = rospy.Publisher (/topico, tipo de mensaje, queue_size=10)
+    #-Escribe aqui
 
     rate = rospy.Rate(10) #10 Hz
 
-    #publica con pub.publish(tipo de mensaje)
-    pub.publish(twist)
+    #publicar con pub.publish(tipo de mensaje)
+    #-Escribe aqui
     
-    #Llama la funcion opencv_bridge con los parametros imagen y tecla_keyboard
-    opencv_bridge(ros_msg_imagen, tecla_keyboard)
+    #Llama la funcion opencv_bridge con los parametros <<ros_msg_imagen>> y <<tecla_keyboard>>
+    #-Escribe aqui
     
-    rate.sleep() 
+    rate.sleep() #sleep
 
 def image_subscriber():
     ''' Funcion principal, aqui se define el nodo subscriber y el topico usado
     para recibir esa informacion''' 
-    #Define el nodo con el parametro anonymous=True
-    rospy.init_node('Teleop', anonymous=True)
+    #Inicializa el nodo con el parametro anonymous=True
+    #-Escribe aqui
+
     #Subscribete al topico: /frontr200/camera/color/image_raw, recibe un ROS msg tipo [sensor_msgs/Image]
     #recuerda que cuando se recibe un mensaje se activa la funcion callback.
-    rospy.Subscriber("/frontr200/camera/color/image_raw", Image, callback) #Callback
-    #Evita que el nodo se cierre
-    rospy.spin()
+    #-Escribe aqui
+    
+    rospy.spin() #Evita que el nodo se cierre
 
 #<!--////////////////////////////////////////////////////////////////////////////// -->
 #<!--//////////////////////////INICIO NO MOVER///////////////////////////////////// -->
@@ -171,8 +183,7 @@ if __name__ == '__main__':
     if os.name != 'nt':
         settings = termios.tcgetattr(sys.stdin)
     try:
-        #Corre la funcion principal
-        image_subscriber()
+        image_subscriber() #Corre la funcion principal
     except rospy.ROSInterruptException:
         pass
 #<!--////////////////////////////////////////////////////////////////////////////// -->
