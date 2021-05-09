@@ -55,45 +55,32 @@
 <!-- ///////////////////////////INICIA AQUI/////////////////////////////////////// -->
 <!--////////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- Begin Path marker-->
+<!-- Despliega los 5 props en gazebo, toma el siguiente ejemplo para llenar los demas-->
+
+  <!--Se inicializa el grupo path_marker, este desplegara el prop en gazebo. --> 
   <group ns="Pathmarker">
+  <!--Se utiliza un parametro (como una variable) llamado <<robot_description>>
+  donde se encuentra el path al archivo.xacro que le corresponde--> 
     <param name="robot_description"
           command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/pathmarker.xacro' "/> 
+    <!--Se inicializa el nodo especial para desplegar cosas en Gazebo, este viene del
+    pkg <<gazebo_ros>> que venia con la instalacion de ros, el nombre del nodo se define
+    como <<spawn_urdf>> y el tipo necesitado es <<spawn_model>>--> 
     <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
           args="-x 4 -y 10 -z -55 -urdf -param robot_description -model path_marker"/>
+    <!--Los <<args>> son argumentos necesitados para desplegar el modelo en Gazebo, como las coordenadas
+    x,y,z además de aquellas por default: -urdf -param robot_description -model <<nombre_del_prop>>--> 
   </group> 
   
-  <!-- Begin Gate -->
-  <group ns="Gate">
-    <param name="robot_description"
-      command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/gate.xacro' "/>  
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-x 7 -y 10 -z -55 -urdf -param robot_description -model gate_1"/> 
-  </group>
+  <!-- Escribe aqui: inicializa el grupo <<Gate>> con coordenadas en gazebo x=4, y=10, z=-55 -->
 
-  <!-- Begin Buoy1 (GUN) -->
-  <group ns="Buoy1"> 
-    <param name="robot_description"
-      command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/buoy.xacro' "/> 
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-          args="-x 9 -y 10 -z -55 -urdf -param robot_description -model buoy_1"/> 
-  </group> 
+  <!-- Escribe aqui: inicializa el grupo <<Buoy1>> con coordenadas en gazebo x=9, y=10, z=-55 -->
 
-    <!-- Begin Buoy2 (Badge) -->
-  <group ns="Buoy2"> 
-    <param name="robot_description"
-      command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/buoy2.xacro' "/> 
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-          args="-x 9 -y 10 -z -55 -urdf -param robot_description -model buoy_2"/> 
-  </group> 
+  <!-- Escribe aqui: inicializa el grupo <<Buoy2>> con coordenadas en gazebo x=9, y=10, z=-55 -->
 
-  <!-- Begin Bin1-->
-  <group ns="Bin1">
-    <param name="robot_description"
-          command="$(find xacro)/xacro --inorder '$(find sim_challenges)/urdf/bin1.xacro' "/> 
-    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
-          args="-x 10 -y 10 -z -59 -urdf -param robot_description -model bin_1"/>
-  </group>
+  <!-- Escribe aqui: inicializa el grupo <<Buoy2>> con coordenadas en gazebo x=9, y=10, z=-55 -->
+
+  <!-- Escribe aqui: inicializa el grupo <<Bin1>> con coordenadas en gazebo x=10, y=10, z=-59 -->
 
 </launch>
  
