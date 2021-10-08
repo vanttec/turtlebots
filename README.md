@@ -27,7 +27,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 ```
 
 ***Turtlebots team:***
-- _Sebas (presi)_
+- _Sebas (vice)_
 - _Saúl (instructor)_
 - _Ivan (instructor)_
 - _Lucas o.o_
