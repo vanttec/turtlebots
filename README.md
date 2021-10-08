@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="https://github.com/vanttec/turtlebots/blob/main/src/images/LogoAzul_Negro.png" width="400" height="240" align="center"/>
 </p>
@@ -30,6 +31,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 - _Sebas (vice)_
 - _Saúl (instructor)_
 - _Ivan (instructor)_
+
 - _Lucas o.o_
 - _Alex :D_
 - AndresS_
