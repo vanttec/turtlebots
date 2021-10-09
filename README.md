@@ -27,14 +27,14 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 ```
 
 ***Turtlebots team:***
-- _Sebas (presi)_
-- _Saúl (instructor)_
-- _Ivan (instructor)_
-- _Lucas o.o_
-- _Alex :D_
-- AndresS_
-- _Javi ;)_  
-- Pau :)
+- _Sebas (vice)_
+-  _Nombre_
+-  _Nombre_
+- _Nombre_
+- _Nombre_
+- _Nombre_
+- _Nombre_ 
+- _Nombre_
 - _Nombre_
 - _..._
 
