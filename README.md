@@ -30,7 +30,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 - _Sebas (vice)_
 -  _Nombre_
 -  _Nombre_
-- _Nombre_
+- Rodrigo
 - _Nombre_
 - _Nombre_
 - _Nombre_ 
