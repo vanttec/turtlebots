@@ -35,7 +35,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 - _Nombre_
 - _Nombre_ 
 - _Nombre_
-- _Nombre_
+- _Alexa_
 - _..._
 
 ----------------
