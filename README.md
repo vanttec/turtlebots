@@ -31,7 +31,7 @@ Do the next activities using your **Ubuntu 18.04** terminal, this will help you 
 -  _Alex_
 -  _Max_
 - _Rodrigo_
-- _Nombre_
+- _Claudia_
 - _Nombre_
 - _Nombre_ 
 - _Nombre_
